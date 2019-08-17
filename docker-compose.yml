@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  erlang:
+    image: erlang:latest
+    volumes:
+      - .:/projects/erl-wolves-and-rabbits-world-sim
+    networks:
+      - erl-net
+
+networks:
+  erl-net:
+    driver: bridge
